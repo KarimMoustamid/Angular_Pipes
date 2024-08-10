@@ -1,7 +1,50 @@
-<div class="">
-  <label>Payee Name : </label>
-  <input (input)="onNameChange($event)">
+<div class="container h-75">
+  <h3 class="my-4">Payment From</h3>
+  <div class="row mb-4">
+    <div class="form-group col">
+      <label class="mx-4">Payee Name : </label>
+      <input (input)="onNameChange($event)">
+    </div>
+
+    <div class="col">
+      <label><b>Name :</b></label>
+      <div class="">{{ name | titlecase }}</div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="form-group col">
+      <label class="mx-4">Payment Date : </label>
+      <input type="date" (input)="onDateChange($event)">
+    </div>
+
+    <div class="col">
+      <label><b>Payment Date : </b></label>
+      <div class="">{{ date | date: "MMMM d, y" }}</div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="form-group col">
+      <label class="mx-4">Payment Amount : </label>
+      <input (input)="onAmountChange($event)">
+    </div>
+
+    <div class="col">
+      <label><b>Payment Amount : </b></label>
+      <div class="">{{ amount | currency }}</div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="form-group col">
+      <label class="mx-4">Miles</label>
+      <input (input)="onMilesChange($event)">
+    </div>
+
+    <div class="col">
+      <label><b>Kilometres : </b></label>
+      <div class="">{{ miles | convert: 'm' }}</div>
+    </div>
+  </div>
 </div>
-
-
-{{name | titlecase}}
