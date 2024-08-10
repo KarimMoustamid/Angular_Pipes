@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
-import {CurrencyPipe, DatePipe, NgIf, TitleCasePipe} from "@angular/common";
+import {CurrencyPipe, DatePipe, DecimalPipe, NgIf, TitleCasePipe} from "@angular/common";
 import {ConvertPipe} from "./convert.pipe";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TitleCasePipe, DatePipe, CurrencyPipe, ConvertPipe, NgIf],
+  imports: [RouterOutlet, TitleCasePipe, DatePipe, CurrencyPipe, ConvertPipe, NgIf, DecimalPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
